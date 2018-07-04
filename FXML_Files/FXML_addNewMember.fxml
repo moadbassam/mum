@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="fgfg" fx:id="ffsdf" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="278.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button id="submit" layoutX="119.0" layoutY="300.0" mnemonicParsing="false" text="Submit" textFill="#208d86" textOverrun="LEADING_ELLIPSIS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField id="id" layoutX="121.0" layoutY="27.0" prefHeight="25.0" prefWidth="104.0" />
+      <Text layoutX="32.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fill="#322e2e" layoutX="20.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*ID" wrappingWidth="43.947265625" />
+      <TextField id="fname" layoutX="121.0" layoutY="57.0" prefHeight="25.0" prefWidth="104.0" />
+      <TextField id="lname" layoutX="121.0" layoutY="90.0" prefHeight="25.0" prefWidth="104.0" />
+      <Text layoutX="22.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" wrappingWidth="68.947265625" />
+      <Text layoutX="22.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" wrappingWidth="68.947265625" />
+      <TextField id="phone" layoutX="121.0" layoutY="120.0" prefHeight="25.0" prefWidth="104.0" />
+      <Text layoutX="22.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" wrappingWidth="68.947265625" />
+      <TextField id="street" layoutX="119.0" layoutY="153.0" prefHeight="25.0" prefWidth="104.0" />
+      <Text layoutX="20.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Street" wrappingWidth="68.947265625" />
+      <Text layoutX="20.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="State" wrappingWidth="68.947265625" />
+      <TextField id="state" layoutX="119.0" layoutY="219.0" prefHeight="25.0" prefWidth="104.0" />
+      <Text layoutX="20.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" wrappingWidth="68.947265625" />
+      <TextField id="city" layoutX="119.0" layoutY="186.0" prefHeight="25.0" prefWidth="104.0" />
+      <TextField id="zip" layoutX="117.0" layoutY="257.0" prefHeight="25.0" prefWidth="104.0" />
+      <Text layoutX="18.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip Code" wrappingWidth="68.947265625" />
+      <Button id="cancel" visible="false" cancelButton="true" defaultButton="true" layoutX="212.0" layoutY="300.0" mnemonicParsing="false" text="Cancel">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <AnchorPane layoutX="400.0" layoutY="3.0" prefHeight="200.0" prefWidth="200.0" />
+      <Text layoutX="13.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Required Fileds" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MenuController">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="LibraryMenu" mnemonicParsing="false" text="Library Memebers">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AddMemeber" text="Add Member" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#ShowMemberList" text="List of Memebers" />
+            </items>
+          </Menu>
+          <Menu fx:id="BookMenu" mnemonicParsing="false" text="Book">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AddBook" text="Add Book" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#addCopyforBook" text="Add Book Copy" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem onAction="#showBooksList" mnemonicParsing="false" text="List of Books" />
+            </items>
+          </Menu>
+            <Menu fx:id="ActionsMenu" mnemonicParsing="false" text="Actions">
+              <items>
+                  <MenuItem fx:id="chkrecordMenu" mnemonicParsing="false" onAction="#showCheckRecords" text="Checkout Record" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="checkoutBookMenu" mnemonicParsing="false" onAction="#showCheckoutBook" text="Checkout Book" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="prntChkMenu" mnemonicParsing="false" onAction="#showPrintForm" text="Print Checkout Record" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <Label alignment="BASELINE_LEFT" contentDisplay="CENTER" lineSpacing="5.0" text="Library Management System" textOverrun="WORD_ELLIPSIS" BorderPane.alignment="BOTTOM_LEFT">
+         <font>
+            <Font name="Calibri Bold Italic" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.12380952380952376">
+               <stops>
+                  <Stop color="#d3d1cd" />
+                  <Stop color="#3dcbe1" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <Glow level="0.71" />
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="5.0" />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+</BorderPane>
