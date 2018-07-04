@@ -25,11 +25,7 @@ public class Login extends Application {
 
 		Parent root = FXMLLoader.load(getClass().getResource("../FXML_Files/FXML_LoginForm.fxml"));
 		primaryStage.setTitle("Login Form");
-//added by ABEER
-		// by niveen 45llkkjj
-		
-		
-		//by moad
+
 		// you can communicate with the components using id's
 		TextField usertf = (TextField) root.lookup("#usertf");
 		PasswordField passwordField = (PasswordField) root.lookup("#passwordField");
