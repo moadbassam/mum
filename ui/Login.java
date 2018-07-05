@@ -8,10 +8,12 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -20,24 +22,25 @@ import javafx.stage.WindowEvent;
 
 public class Login extends Application {
 	
+	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 
 		Parent root = FXMLLoader.load(getClass().getResource("../FXML_Files/FXML_LoginForm.fxml"));
 		primaryStage.setTitle("Login Form");
 
-		// you can communicate with the components using id's
+				// you can communicate with the components using id's
 		TextField usertf = (TextField) root.lookup("#usertf");
 		PasswordField passwordField = (PasswordField) root.lookup("#passwordField");
 		Text actiontarget = (Text) root.lookup("#actiontarget");
 		Button submitbtn = (Button) root.lookup("#submitbtn");
-
+		
 		submitbtn.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				SystemController controller = SystemController.getInstance();
 				try {
-
+					
 					controller.login(usertf.getText(), passwordField.getText());
 					MainForm main = new MainForm();
 					primaryStage.hide();
