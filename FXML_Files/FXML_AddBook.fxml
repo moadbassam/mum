@@ -1,26 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AddBookController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="327.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AddBookController">
   <children>
     <GridPane layoutX="86.0" layoutY="70.0" prefHeight="192.0" prefWidth="429.0">
       <children>
-        <Label text="ISBN" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-        <Label text="Title" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-        <Label text="Authors" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-        <Label text="Maximum Checkout Length" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-        <Label text="Number Of Copies" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label text="ISBN" GridPane.columnIndex="0" GridPane.rowIndex="0">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.5904761904761905">
+                     <stops>
+                        <Stop color="#382fb2" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+        <Label text="Title" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.5904761904761905">
+                     <stops>
+                        <Stop color="#382fb2" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+        <Label text="Authors" GridPane.columnIndex="0" GridPane.rowIndex="2">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.5904761904761905">
+                     <stops>
+                        <Stop color="#382fb2" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+        <Label text="Maximum Checkout Length" GridPane.columnIndex="0" GridPane.rowIndex="3">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.5904761904761905">
+                     <stops>
+                        <Stop color="#382fb2" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+        <Label text="Number Of Copies" GridPane.columnIndex="0" GridPane.rowIndex="4">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.5904761904761905">
+                     <stops>
+                        <Stop color="#382fb2" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
         
-        <TextField fx:id="txtISBN" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-        <TextField fx:id="txtTitle" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <TextField fx:id="txtAuthors" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-        <TextField fx:id="txtMaxChkLength" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-        <TextField fx:id="txtNoOfCopy" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="txtISBN" prefWidth="200.0" promptText="ISBN" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="txtTitle" prefWidth="200.0" promptText="Title" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="txtAuthors" prefWidth="200.0" promptText="Author" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="txtMaxChkLength" prefWidth="200.0" promptText="Maximum Checkout Length" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="txtNoOfCopy" prefWidth="200.0" promptText="Number Of Copies" GridPane.columnIndex="1" GridPane.rowIndex="4" />
         
         <HBox prefHeight="21.0" prefWidth="72.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
       </children>
@@ -37,8 +79,21 @@
         <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
       </rowConstraints>
     </GridPane>
-<Button layoutX="246.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleAddBookAction" text="Submit" />
-<Button layoutX="314.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleCancelBookAction" text="Cancel" />
+<Button layoutX="394.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleAddBookAction" text="Submit" textAlignment="CENTER" />
+<Button layoutX="463.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleCancelBookAction" text="Cancel" />
       <Label fx:id="lblMessage" layoutX="86.0" layoutY="340.0" textFill="#eb0505" />
+      <Label layoutX="42.0" layoutY="14.0" text="ADD Book">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.44285714285714284">
+               <stops>
+                  <Stop color="#1100ff87" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
   </children>
 </AnchorPane>
