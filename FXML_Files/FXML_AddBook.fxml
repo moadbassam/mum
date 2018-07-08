@@ -82,15 +82,15 @@
 <Button layoutX="394.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleAddBookAction" text="Submit" textAlignment="CENTER" />
 <Button layoutX="463.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleCancelBookAction" text="Cancel" />
       <Label fx:id="lblMessage" layoutX="86.0" layoutY="340.0" textFill="#eb0505" />
-      <Label layoutX="42.0" layoutY="14.0" text="ADD Book">
+      <Label graphicTextGap="2.0" layoutX="42.0" layoutY="14.0" text="ADD Book">
          <font>
-            <Font size="27.0" />
+            <Font name="Georgia" size="27.0" />
          </font>
          <textFill>
-            <LinearGradient endX="1.0" endY="1.0" startX="0.44285714285714284">
+            <LinearGradient endX="1.0" endY="1.0" startX="0.10476190476190475" startY="0.12857142857142856">
                <stops>
-                  <Stop color="#1100ff87" />
-                  <Stop color="WHITE" offset="1.0" />
+                  <Stop color="#00000087" />
+                  <Stop color="#0915fc87" offset="1.0" />
                </stops>
             </LinearGradient>
          </textFill>
