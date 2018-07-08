@@ -29,6 +29,7 @@ public class AddBookCopy extends Application {
 
 		stage.setTitle("Add Book Copy");
 		Scene scene = new Scene(root, 400, 350);
+			scene.getStylesheets().add(getClass().getResource("../Css/InnerForms.css").toExternalForm());
 		stage.setScene(scene);
 		stage.show();
 		TextField textfield = (TextField) root.lookup("#textfield");

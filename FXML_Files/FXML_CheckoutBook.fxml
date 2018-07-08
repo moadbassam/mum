@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="371.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.CheckoutController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.CheckoutController">
 	<children>
-		<Label fx:id="lblMessage" layoutX="133.0" layoutY="14.0" prefHeight="38.0" prefWidth="345.0" textFill="RED" />
+		<Label fx:id="lblMessage" layoutX="41.0" layoutY="155.0" prefHeight="38.0" prefWidth="345.0" textFill="RED" />
 		<GridPane layoutX="50.0" layoutY="49.0" prefHeight="106.0" prefWidth="300.0">
 			<children>
 				<Label fx:id="lblMemberId" text="Member Id" GridPane.columnIndex="0" GridPane.rowIndex="0" />
@@ -28,7 +29,12 @@
 				<RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
 			</rowConstraints>
 		</GridPane>
-		 <TableView fx:id="tblCheckoutBook" layoutX="41.0" layoutY="185.0" prefHeight="116.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="4"/>
+		 <TableView fx:id="tblCheckoutBook" layoutX="41.0" layoutY="204.0" prefHeight="116.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="4" />
+      <Label id="welcome-text" graphicTextGap="2.0" layoutX="20.0" layoutY="14.0" text="Check Out Book" textFill="#e1e6f087">
+         <font>
+            <Font name="Georgia" size="27.0" />
+         </font>
+      </Label>
 	 
 	 </children>
 </AnchorPane>

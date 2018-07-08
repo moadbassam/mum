@@ -46,7 +46,10 @@ public class CheckoutBook extends Application {
 			}
 		});
 		stage.setTitle("Checkout Book");
-		stage.setScene(new Scene(root, 800, 360));
+		Scene scene=new Scene(root, 600, 350);
+		scene.getStylesheets().add(getClass().getResource("../Css/InnerForms.css").toExternalForm());
+
+		stage.setScene(scene);
 		stage.show();
 	}
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,13 +8,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="185.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <GridPane layoutX="62.0" layoutY="47.0" prefHeight="218.0" prefWidth="332.0">
+    <GridPane layoutX="62.0" layoutY="47.0" prefHeight="126.0" prefWidth="332.0">
       <children>
         <Button id="print" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" text="Print" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-        <TextField id="memberid" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Member Id: " GridPane.rowIndex="1">
+        <TextField id="memberid" prefWidth="177.0" promptText="Member ID: " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Member ID: " GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>
@@ -31,5 +32,10 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       </rowConstraints>
     </GridPane>
+      <Label id="welcome-text" graphicTextGap="2.0" layoutX="31.0" layoutY="24.0" text="Member Check Out Record" textFill="#e1e6f087">
+         <font>
+            <Font name="Georgia" size="27.0" />
+         </font>
+      </Label>
   </children>
 </AnchorPane>

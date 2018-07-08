@@ -63,7 +63,11 @@ public class EditBook extends Application {
 			}
 		});
 
-		stage.setScene(new Scene(root, 900, 550));
+		Scene  scene=new Scene(root,550,400);
+		scene.getStylesheets().add(getClass().getResource("../Css/InnerForms.css").toExternalForm());
+
+		stage.setScene(scene);
+
 		stage.show();
 	}
 

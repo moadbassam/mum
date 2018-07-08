@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -12,7 +13,7 @@
     <GridPane layoutX="62.0" layoutY="47.0" prefHeight="218.0" prefWidth="332.0">
       <children>
         <Button id="button" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" text="Add" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-        <TextField id="textfield" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField id="textfield" prefWidth="177.0" promptText="ISBN" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="ISBN:" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="5.0" />
@@ -37,5 +38,10 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       </rowConstraints>
     </GridPane>
+      <Label id="welcome-text" graphicTextGap="2.0" layoutX="51.0" layoutY="40.0" text="ADD Copy Book" textFill="#e1e6f087">
+         <font>
+            <Font name="Georgia" size="27.0" />
+         </font>
+      </Label>
   </children>
 </AnchorPane>

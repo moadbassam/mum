@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.control.*?>
@@ -16,11 +17,11 @@
 				<Label text="Maximum Checkout Length" GridPane.columnIndex="0" GridPane.rowIndex="3" />
 				<Label text="Number Of Copies" GridPane.columnIndex="0" GridPane.rowIndex="4" />
 
-				<TextField id="isbn" fx:id="txtISBN" disable="true" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-				<TextField id="title" fx:id="txtTitle" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-				<TextField id="authors" fx:id="txtAuthors" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-				<TextField id="chekout" fx:id="txtMaxChkLength" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-				<TextField id="numcompies" fx:id="txtNoOfCopy" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+				<TextField id="isbn" fx:id="txtISBN" disable="true" editable="false" prefWidth="200.0" promptText="ISBN" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+				<TextField id="title" fx:id="txtTitle" prefWidth="200.0" promptText="Title" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				<TextField id="authors" fx:id="txtAuthors" prefWidth="200.0" promptText="Author" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<TextField id="chekout" fx:id="txtMaxChkLength" prefWidth="200.0" promptText="Maximum Checkout Length" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+				<TextField id="numcompies" fx:id="txtNoOfCopy" prefWidth="200.0" promptText="Maximum Checkout Length" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
 				<HBox prefHeight="21.0" prefWidth="72.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 			</children>
@@ -40,5 +41,10 @@
 		<Button layoutX="246.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleEditBookAction" text="Submit" />
 		<Label fx:id="lblMessage" layoutX="86.0" layoutY="340.0" textFill="#eb0505" />
       <Label fx:id="lblMessage" layoutX="86.0" layoutY="332.0" textFill="#ff0202" />
+      <Label id="welcome-text" graphicTextGap="2.0" layoutX="26.0" layoutY="22.0" text="Edit Book" textFill="#e1e6f087">
+         <font>
+            <Font name="Georgia" size="27.0" />
+         </font>
+      </Label>
 	</children>
 </AnchorPane>

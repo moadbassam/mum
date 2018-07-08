@@ -24,7 +24,9 @@ public class AddNewMemeber extends Application {
 	public void start(Stage stage) throws Exception {
 
 		Parent root = FXMLLoader.load(getClass().getResource("../FXML_Files/FXML_addNewMember.fxml"));
-		Scene sc = new Scene(root, 600, 400);
+		Scene sc = new Scene(root, 365, 450);
+		sc.getStylesheets().add(getClass().getResource("../Css/InnerForms.css").toExternalForm());
+
 		stage.setScene(sc);
 
 		TextField txtid = (TextField) root.lookup("#id");

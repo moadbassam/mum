@@ -27,7 +27,7 @@
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem mnemonicParsing="false" onAction="#addCopyforBook" text="Add Book Copy" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem onAction="#showBooksList" mnemonicParsing="false" text="List of Books" />
+                  <MenuItem mnemonicParsing="false" onAction="#showBooksList" text="List of Books" />
             </items>
           </Menu>
             <Menu fx:id="ActionsMenu" mnemonicParsing="false" text="Actions">
@@ -43,18 +43,10 @@
       </MenuBar>
    </top>
    <bottom>
-      <Label alignment="BASELINE_LEFT" contentDisplay="CENTER" lineSpacing="5.0" text="Library Management System" textOverrun="WORD_ELLIPSIS" BorderPane.alignment="BOTTOM_LEFT">
+      <Label alignment="BASELINE_LEFT" contentDisplay="CENTER" lineSpacing="5.0" text="Library Management System" textFill="WHITE" textOverrun="WORD_ELLIPSIS" BorderPane.alignment="CENTER">
          <font>
             <Font name="Calibri Bold Italic" size="36.0" />
          </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0" startX="0.12380952380952376">
-               <stops>
-                  <Stop color="#d3d1cd" />
-                  <Stop color="#3dcbe1" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </textFill>
          <effect>
             <Glow level="0.71" />
          </effect>

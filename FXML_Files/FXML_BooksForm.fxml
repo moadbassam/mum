@@ -32,7 +32,7 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label contentDisplay="CENTER" opacity="0.94" text="Books List" GridPane.columnIndex="3" GridPane.columnSpan="5" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+      <Label id="welcome-text" contentDisplay="CENTER" opacity="0.94" text="Books List" GridPane.columnIndex="3" GridPane.columnSpan="5" GridPane.halignment="LEFT" GridPane.rowIndex="1">
          <font>
             <Font name="Book Antiqua" size="30.0" />
          </font>
@@ -47,8 +47,8 @@
          </padding>
       </Label>
       <TableView fx:id="booksTable" prefHeight="189.0" prefWidth="442.0" GridPane.columnIndex="1" GridPane.columnSpan="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="5" />
-      <Button fx:id="editButton" mnemonicParsing="false" text="Edit Book" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
-      <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete Book" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+      <Button fx:id="editButton" mnemonicParsing="false" text="Edit Book" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+      <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete Book" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="8" />
      
    </children>
 </GridPane>

@@ -112,7 +112,10 @@ public class EditMember extends Application {
 		});
 
 		primaryStage.setTitle("Edit Member");
-		primaryStage.setScene(new Scene(rot, 400, 360));
+Scene scene=new Scene(rot,400,460);
+		scene.getStylesheets().add(getClass().getResource("../Css/InnerForms.css").toExternalForm());
+
+		primaryStage.setScene(scene);
 		primaryStage.show();
 
 	}

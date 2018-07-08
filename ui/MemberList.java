@@ -91,8 +91,12 @@ public class MemberList extends Application {
 			public void handle(ActionEvent event) {
 				final Text info = (Text) root.lookup("#addressinfo");
 				info.setFill(Color.FIREBRICK);
-
-				info.setText(personTable.getSelectionModel().getSelectedItem().toString());
+try {
+	info.setText(personTable.getSelectionModel().getSelectedItem().toString());
+} catch (Exception e) {
+	info.setText("Please Selet Member in The list!");
+}
+				
 
 			}
 		});
@@ -180,6 +184,9 @@ public class MemberList extends Application {
 			}
 		});
 		Scene scene = new Scene(root, 550, 550);
+
+		scene.getStylesheets().add(getClass().getResource("../Css/InnerForms.css").toExternalForm());
+
 		stage.setScene(scene);
 		stage.show();
 

@@ -133,6 +133,8 @@ public class BooksForm extends Application {
 		});
 
 		Scene scene = new Scene(root, 900, 550);
+		scene.getStylesheets().add(getClass().getResource("../Css/InnerForms.css").toExternalForm());
+
 		stage.setScene(scene);
 		stage.show();
 

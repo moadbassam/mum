@@ -8,31 +8,23 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="fgfg" fx:id="ffsdf" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="248.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="fgfg" fx:id="ffsdf" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="460.0" prefWidth="294.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button id="submit" layoutX="91.0" layoutY="324.0" mnemonicParsing="false" text="Submit" textFill="#208d86" textOverrun="LEADING_ELLIPSIS">
+      <Button id="submit" layoutX="163.0" layoutY="360.0" mnemonicParsing="false" text="Submit" textFill="#208d86" textOverrun="LEADING_ELLIPSIS">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField id="id" disable="true" editable="false" layoutX="122.0" layoutY="51.0" prefHeight="25.0" prefWidth="104.0" />
+      <TextField id="id" disable="true" editable="false" layoutX="122.0" layoutY="87.0" prefHeight="25.0" prefWidth="104.0" promptText="ID" />
       <Text layoutX="33.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <Text fill="#322e2e" layoutX="21.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="43.947265625" />
-      <TextField id="fname" layoutX="122.0" layoutY="81.0" prefHeight="25.0" prefWidth="104.0" />
-      <TextField id="lname" layoutX="122.0" layoutY="114.0" prefHeight="25.0" prefWidth="104.0" />
-      <Text layoutX="23.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" wrappingWidth="68.947265625" />
-      <Text layoutX="23.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" wrappingWidth="68.947265625" />
-      <TextField id="phone" layoutX="122.0" layoutY="144.0" prefHeight="25.0" prefWidth="104.0" />
-      <Text layoutX="23.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" wrappingWidth="68.947265625" />
-      <TextField id="street" layoutX="120.0" layoutY="177.0" prefHeight="25.0" prefWidth="104.0" />
-      <Text layoutX="21.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Street" wrappingWidth="68.947265625" />
-      <Text layoutX="21.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="State" wrappingWidth="68.947265625" />
-      <TextField id="state" layoutX="120.0" layoutY="243.0" prefHeight="25.0" prefWidth="104.0" />
-      <Text layoutX="21.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" wrappingWidth="68.947265625" />
-      <TextField id="city" layoutX="120.0" layoutY="210.0" prefHeight="25.0" prefWidth="104.0" />
-      <TextField id="zip" layoutX="118.0" layoutY="281.0" prefHeight="25.0" prefWidth="104.0" />
-      <Text layoutX="19.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip Code" wrappingWidth="68.947265625" />
-      <Button id="cancel" cancelButton="true" defaultButton="true" layoutX="17.0" layoutY="324.0" mnemonicParsing="false" text="Cancel">
+      <TextField id="fname" layoutX="122.0" layoutY="117.0" prefHeight="25.0" prefWidth="164.0" promptText="First Name" />
+      <TextField id="lname" layoutX="122.0" layoutY="150.0" prefHeight="25.0" prefWidth="164.0" promptText="Last Name" />
+      <TextField id="phone" layoutX="122.0" layoutY="180.0" prefHeight="25.0" prefWidth="104.0" promptText="Phone" />
+      <TextField id="street" layoutX="120.0" layoutY="213.0" prefHeight="25.0" prefWidth="164.0" promptText="Street" />
+      <TextField id="state" layoutX="120.0" layoutY="279.0" prefHeight="25.0" prefWidth="164.0" promptText="State" />
+      <TextField id="city" layoutX="120.0" layoutY="246.0" prefHeight="25.0" prefWidth="164.0" promptText="City" />
+      <TextField id="zip" layoutX="118.0" layoutY="317.0" prefHeight="25.0" prefWidth="104.0" promptText="Zip Code" />
+      <Button id="cancel" cancelButton="true" defaultButton="true" layoutX="226.0" layoutY="360.0" mnemonicParsing="false" text="Cancel">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -41,7 +33,19 @@
          </effect>
       </Button>
       <AnchorPane layoutX="401.0" layoutY="27.0" prefHeight="200.0" prefWidth="200.0" />
-      <Text fill="#322e2e" layoutX="35.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit " textAlignment="CENTER" wrappingWidth="160.947265625" />
+      <Label id="welcome-text" graphicTextGap="2.0" layoutX="32.0" layoutY="14.0" text="Edit Member" textFill="#e1e6f087">
+         <font>
+            <Font name="Georgia" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="321.0" text="Zip Code" />
+      <Label layoutX="78.0" layoutY="91.0" text="ID" />
+      <Label layoutX="55.0" layoutY="121.0" text="First Name" />
+      <Label layoutX="57.0" layoutY="155.0" text="Last Name" />
+      <Label layoutX="68.0" layoutY="184.0" text="Phone" />
+      <Label layoutX="69.0" layoutY="217.0" text="Street" />
+      <Label layoutX="74.0" layoutY="250.0" text="City" />
+      <Label layoutX="71.0" layoutY="283.0" text="State" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

@@ -35,7 +35,9 @@ public class AddBookForm extends Application {
 		});
 
 		stage.setTitle("Add Book");
-		stage.setScene(new Scene(root, 900, 550));
+		Scene scene = new Scene(root, 578, 330);
+		scene.getStylesheets().add(getClass().getResource("../Css/InnerForms.css").toExternalForm());
+		stage.setScene(scene);
 		stage.show();
 	}
 

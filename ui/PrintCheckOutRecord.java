@@ -67,7 +67,9 @@ public class PrintCheckOutRecord extends Application {
 			}
 		});
 
-		Scene scene = new Scene(root, 400, 350);
+		Scene scene = new Scene(root, 390, 180);
+		scene.getStylesheets().add(getClass().getResource("../Css/InnerForms.css").toExternalForm());
+
 		stage.setScene(scene);
 		stage.show();
 	}

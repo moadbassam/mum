@@ -9,12 +9,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-public class MemberCheckoutRecord extends Application{
+public class MemberCheckoutRecord extends Application {
 	@Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../FXML_Files/FXML_checkoutRecordUI.fxml"));
-        
-        stage.setOnHiding(new EventHandler<WindowEvent>() {
+	public void start(Stage stage) throws Exception {
+		Parent root = FXMLLoader.load(getClass().getResource("../FXML_Files/FXML_checkoutRecordUI.fxml"));
+
+		stage.setOnHiding(new EventHandler<WindowEvent>() {
 
 			@Override
 			public void handle(WindowEvent event) {
@@ -35,13 +35,16 @@ public class MemberCheckoutRecord extends Application{
 				});
 			}
 		});
-        
-        stage.setTitle("Checkout Records by Member");
-        stage.setScene(new Scene(root, 800, 360));
-        stage.show();
-    }
-    
-    public static void main(String[] args) {
+
+		stage.setTitle("Checkout Records by Member");
+		Scene scene = new Scene(root, 600, 360);
+		scene.getStylesheets().add(getClass().getResource("../Css/InnerForms.css").toExternalForm());
+
+		stage.setScene(scene);
+		stage.show();
+	}
+
+	public static void main(String[] args) {
 		launch(args);
 	}
 }
