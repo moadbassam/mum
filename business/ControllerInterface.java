@@ -33,4 +33,6 @@ public interface ControllerInterface {
 
 	ObservableList<CheckoutRecordEntryView> readCheckoutRecordByMemberId(String memberId) throws LibrarySystemException;
 
+	ObservableList<CheckoutRecordEntryView> readCheckoutRecordByISBN(String ISBNId) throws LibrarySystemException;
+
 }

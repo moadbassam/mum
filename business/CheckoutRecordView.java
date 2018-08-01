@@ -19,6 +19,16 @@ public class CheckoutRecordView {
 		public String getIndex() {
 			return index;
 		}
+		String MemberName;
+
+		public String getMemberName() {
+			return MemberName;
+		}
+		String Status;
+
+		public String getStatus() {
+			return Status;
+		}
 
 		String checkoutDate;
 
@@ -50,9 +60,9 @@ public class CheckoutRecordView {
 			return isbnIssueNum;
 		}
 
-		int copyNum;
+		 String copyNum;
 
-		public int getCopyNum() {
+		public String getCopyNum() {
 			return copyNum;
 		}
 
@@ -89,7 +99,7 @@ public class CheckoutRecordView {
 			view.day = String.valueOf(e.getBookCopy().getBook().getMaxCheckoutLength());
 			view.title = e.getBookCopy().getBook().getTitle();
 			view.isbnIssueNum = e.getBookCopy().getBook().getIsbn();
-			view.copyNum = e.getBookCopy().getCopyNum();
+			view.copyNum =String.valueOf(e.getBookCopy().getCopyNum());
 			retval.add(view);
 		});
 		return retval;

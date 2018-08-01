@@ -27,6 +27,9 @@ public class MenuController implements Initializable {
 
 	@FXML
 	private MenuItem chkrecordMenu;
+	
+	@FXML
+	private MenuItem chkrecordMenuPerBook;
 
 	@FXML
 	private MenuItem checkoutBookMenu;
@@ -93,7 +96,12 @@ public class MenuController implements Initializable {
 		Thread.sleep(500);
 		MainForm.setStage(new MemberCheckoutRecord());
 	}
-
+@FXML
+	private void showCheckRecordsByBook() throws Exception {
+		MainForm.primaryStage.hide();
+		Thread.sleep(500);
+		MainForm.setStage(new BookCheckOutRecord());
+	}
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 

@@ -37,6 +37,7 @@
                   <MenuItem fx:id="checkoutBookMenu" mnemonicParsing="false" onAction="#showCheckoutBook" text="Checkout Book" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem fx:id="prntChkMenu" mnemonicParsing="false" onAction="#showPrintForm" text="Print Checkout Record" />
+                  <MenuItem fx:id="chkrecordMenuPerBook" mnemonicParsing="false" onAction="#showCheckRecordsByBook" text="Checkout Record By Book Overdue" />
               </items>
             </Menu>
         </menus>

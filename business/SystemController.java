@@ -1,10 +1,14 @@
 package business;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import dataaccess.Auth;
 import dataaccess.DataAccess;
@@ -44,9 +48,9 @@ public class SystemController implements ControllerInterface {
 
 	}
 	/**
-	 * This method checks if memberId already exists -- if so, it cannot be
-	 * added as a new member, and an exception is thrown. If new, creates a new
-	 * LibraryMember based on input data and uses DataAccess to store it.
+	 * This method checks if memberId already exists -- if so, it cannot be added as
+	 * a new member, and an exception is thrown. If new, creates a new LibraryMember
+	 * based on input data and uses DataAccess to store it.
 	 * 
 	 */
 	// public void addNewMember(String memberId, String firstName, String
@@ -54,8 +58,8 @@ public class SystemController implements ControllerInterface {
 	// String telNumber, Address addr) throws LibrarySystemException {
 
 	/**
-	 * Reads data store for a library member with specified id. Ids begin at
-	 * 1001... Returns a LibraryMember if found, null otherwise
+	 * Reads data store for a library member with specified id. Ids begin at 1001...
+	 * Returns a LibraryMember if found, null otherwise
 	 * 
 	 */
 	// public LibraryMember search(String memberId) {
@@ -67,10 +71,10 @@ public class SystemController implements ControllerInterface {
 	// lastName,
 
 	/**
-	 * Looks up Book by isbn from data store. If not found, an exception is
-	 * thrown. If no copies are available for checkout, an exception is thrown.
-	 * If found and a copy is available, member's checkout record is updated and
-	 * copy of this publication is set to "not available"
+	 * Looks up Book by isbn from data store. If not found, an exception is thrown.
+	 * If no copies are available for checkout, an exception is thrown. If found and
+	 * a copy is available, member's checkout record is updated and copy of this
+	 * publication is set to "not available"
 	 */
 	// public void checkoutBook(String memberId, String isbn) throws
 	// LibrarySystemException {
@@ -166,7 +170,7 @@ public class SystemController implements ControllerInterface {
 		if (recordMap.isEmpty())
 			chkRecord = new CheckoutRecord(mapLibraryMember.get(memberId));
 		else
-			chkRecord = recordMap.get(memberId);
+			chkRecord = new CheckoutRecord(mapLibraryMember.get(memberId));
 
 		chkRecord.addEntry(chkEntry);
 		da.saveNewRecord(chkRecord);
@@ -348,11 +352,52 @@ public class SystemController implements ControllerInterface {
 		return list;
 	}
 
+	@SuppressWarnings("deprecation")
+	@Override
+	public ObservableList<CheckoutRecordView.CheckoutRecordEntryView> readCheckoutRecordByISBN(String ISBNId)
+			throws LibrarySystemException {
+		if (ISBNId.equals(""))
+			throw new LibrarySystemException("No ISBN specefied , please specifiy one!");
+
+		DataAccess da = new DataAccessFacade();
+		HashMap<String, CheckoutRecord> Map = da.readCheckoutRecordMap();
+		ObservableList<CheckoutRecordView.CheckoutRecordEntryView> list = FXCollections.observableArrayList();
+		Iterator it = Map.entrySet().iterator();
+		while (it.hasNext()) {
+			Map.Entry pair = (Map.Entry) it.next();
+			System.out.println(pair.getKey() + " = " + pair.getValue());
+
+			CheckoutRecord checkrecord = (CheckoutRecord) pair.getValue();
+			for (CheckoutEntry entry : checkrecord.getEntries()) {
+				if (entry.getBookCopy().getBook().getIsbn().equals(ISBNId)) {
+					CheckoutRecordView.CheckoutRecordEntryView chkView = new CheckoutRecordView.CheckoutRecordEntryView();
+					chkView.checkoutDate = entry.getCheckoutDate().toString();
+					chkView.dueDate = entry.getDueDate().toString();
+					chkView.title = entry.getBookCopy().getBook().getTitle();
+					chkView.isbnIssueNum = entry.getBookCopy().getBook().getIsbn();
+					chkView.copyNum = String.valueOf(entry.getBookCopy().getCopyNum());
+					chkView.MemberName = entry.getLibraryMember().getFirstName();
+
+					if (entry.getDueDate().compareTo(java.sql.Date.valueOf(LocalDate.now())) < 0)
+						chkView.Status = "Overdue";
+
+					list.add(chkView);
+				}
+			}
+
+		}
+
+		if (list.size()==0)
+			throw new LibrarySystemException("There is no CheckoutRecord ISBN with: " + ISBNId);
+
+		return list;
+	}
+
 	public void updateBookInfo(String isbn, String title, int maxCheckoutLength, List<Author> authors, int noOfCopies)
 			throws LibrarySystemException {
 		DataAccess dataaccess = new DataAccessFacade();
 		HashMap<String, Book> chkMemberIdMap = dataaccess.readBooksMap();
-		
+
 		Book bo = new Book(isbn, title, maxCheckoutLength, noOfCopies, authors);
 		chkMemberIdMap.put(isbn, bo);
 		dataaccess.saveNewBook(bo);
